@@ -1,16 +1,27 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import ProTip from './ProTip';
+import AppHeaderBar from './header/header.js';
+
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//       flexGrow: 1,
+//     },
+//     menuButton: {
+//       marginRight: theme.spacing(2),
+//     },
+//     title: {
+//       flexGrow: 1,
+//     },
+//   }));
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://facets.co/">
+        facets
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -20,14 +31,11 @@ function Copyright() {
 
 export default function App() {
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Create React App v4-beta example
-        </Typography>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <Box>
+        <AppHeaderBar />
+        <Box my={4}>
+            <p>Content Pane</p>
+        </Box>
+    </Box>
   );
 }
