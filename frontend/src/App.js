@@ -3,6 +3,10 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import AppHeaderBar from './header/header.js';
+import Dashboard from './dashboard/dashboard.js';
+
+import { Route } from 'react-router-dom';
+// import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 // const useStyles = makeStyles((theme) => ({
 //     root: {
@@ -31,11 +35,15 @@ function Copyright() {
 
 export default function App() {
   return (
-    <Box>
-        <AppHeaderBar />
-        <Box my={4}>
-            <p>Content Pane</p>
-        </Box>
-    </Box>
+    <div>
+      <AppHeaderBar/>
+      <Dashboard />
+      {/* <Route path="/" component={AppHeaderBar}/>
+      <Route exact path="/" component={Dashboard} /> */}
+      {/* <AuthRoute path="/signup" component={SignupContainer} />
+      <AuthRoute path="/login" component={LoginContainer} />
+      <ProtectedRoute path="/" component={Dashboard} /> */}
+      <Copyright />
+  </div>
   );
 }
