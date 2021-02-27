@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(8),
 
   },
+  menu_root: {
+    minWidth: 200,
+  },
   menu_button_container: {
     width: 240,
     marginRight: theme.spacing(4),
@@ -100,7 +103,8 @@ export default function AppHeaderBar() {
                                     Andrew Scott
                                 </div>
                             </Button>
-                        <Menu
+                        <Menu 
+                            classes={{paper: classes.menu_root}}
                             id="menu-appbar"
                             anchorEl={anchorEl}
                             anchorOrigin={{
