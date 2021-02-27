@@ -83,7 +83,6 @@ export default function AppHeaderBar() {
                 <Box className={classes.links_box}>
                     <Link className={classes.top_link}>Dashboard</Link>
                     <Link className={classes.top_link}>Work Flow</Link>
-
                 </Box>
 
                 {auth && (
