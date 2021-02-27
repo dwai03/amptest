@@ -47,5 +47,6 @@ Thumbs.db
 
 /node_modules
 /yarn-error.log
+/dist
 
 .byebug_history
