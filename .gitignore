@@ -48,5 +48,17 @@ Thumbs.db
 /node_modules
 /yarn-error.log
 /dist
+node_modules
+build
+npm-debug.log
 
-.byebug_history
+# VSCode 
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
