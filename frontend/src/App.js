@@ -22,7 +22,8 @@ import { Route } from 'react-router-dom';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Box height={20} width={1} bgcolor="deeppink">
+    <Typography variant="body2" color="textPrimary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://facets.co/">
         facets
@@ -30,6 +31,7 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
+    </Box>
   );
 }
 
@@ -37,13 +39,14 @@ export default function App() {
   return (
     <div>
       <AppHeaderBar/>
+      <Box bgcolor="deeppink" width={1} height={20}></Box>
       <Dashboard />
       {/* <Route path="/" component={AppHeaderBar}/>
       <Route exact path="/" component={Dashboard} /> */}
       {/* <AuthRoute path="/signup" component={SignupContainer} />
       <AuthRoute path="/login" component={LoginContainer} />
       <ProtectedRoute path="/" component={Dashboard} /> */}
-      <Copyright />
+      <Box height={20} width={1} bgcolor="deeppink"></Box>
   </div>
   );
 }

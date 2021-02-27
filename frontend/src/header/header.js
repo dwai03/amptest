@@ -72,7 +72,6 @@ export default function AppHeaderBar() {
 
 
   return (
-
     <AppBar position="static" className={classes.root}>
       <Toolbar className={classes.toolbar}>
         <Box>
