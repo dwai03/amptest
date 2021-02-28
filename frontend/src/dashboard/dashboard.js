@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 90,
     marginBottom: 90,
     display: 'flex',
-    alignItems: 'center',
+    justifyContent: 'center',
   },
   top_section: {
     display: 'flex',
