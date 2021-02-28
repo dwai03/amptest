@@ -15,7 +15,6 @@ import Logo from './facetslogo.png';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: '#000000'
   },
   toolbar: {
     minHeight: 128,
