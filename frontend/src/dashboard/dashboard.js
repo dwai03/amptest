@@ -22,8 +22,15 @@ import theme from '../theme';
 import { flexbox } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
+  dashboard_container: {
+    marginTop: 90,
+    marginBottom: 90,
+    display: 'flex',
+    alignItems: 'center',
+  },
   top_section: {
     display: 'flex',
+    maxWidth: 850,
   },
   top_section_left: {
     display: 'flex',
@@ -68,7 +75,7 @@ export default function Dashboard() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
-        <Box style={{ minHeight: 600, marginTop: 90 }} >
+        <Box className={classes.dashboard_container} >
           <Box className={classes.top_section}>
             <Box className={classes.top_section_left}>
               <ProfileCard />
