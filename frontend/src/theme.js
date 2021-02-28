@@ -25,6 +25,13 @@ const theme = createMuiTheme({
     secondary: {
       main: '#33A8DF',
     },
+    cardGray: '#363636',
+    actionRed: '#E91C3A',
+    actionOrange: '#F8991D',
+    actionBlue: '#33A8DF',
+    actionGreen: '#51B848',
+    actionPurple: '#6752A2',
+    actionPink: '#ED1470',
     error: {
       main: red.A400,
     },
