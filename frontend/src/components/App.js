@@ -5,6 +5,7 @@ import AppHeaderBar from './app_header_bar/AppHeaderBar.js';
 import Dashboard from './dashboard_page/DashboardPage.js';
 import { Switch, Route } from "react-router-dom";
 
+import LandingPage from './landing_page/LandingPage';
 // import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 
@@ -13,8 +14,7 @@ export default function App() {
     <div>
       <AppHeaderBar />
       <Switch>
-        <Route path="/" component={AppHeaderBar} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={Dashboard} />
         {/* <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <ProtectedRoute path="/" component={Dashboard} /> */}
