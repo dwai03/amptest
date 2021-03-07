@@ -4,13 +4,18 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import App from './App';
 import theme from './theme';
-import { Provider, HashRouter } from 'react-redux';
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
+  <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+        <Router>
           <App />
-    </ThemeProvider>,
+        </Router>
+    </ThemeProvider>
+  </Provider>,
 
   document.querySelector('#root'),
 );
