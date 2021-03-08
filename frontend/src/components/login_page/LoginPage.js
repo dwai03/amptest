@@ -11,14 +11,14 @@ const useStyles = makeStyles((theme)=> ({
   }
 }));
 
-export default function SignupPage() {
+export default function LoginPage() {
   const classes = useStyles();
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
         <Box className={classes.container}>
-          Signup
+          Login
         </Box>
       </Container>
     </React.Fragment>

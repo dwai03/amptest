@@ -5,15 +5,15 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import App from './App';
 import theme from './theme';
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 export default ({ store }) => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      <HashRouter>
         <App />
-      </Router>
+      </HashRouter>
     </ThemeProvider>
   </Provider>
 );

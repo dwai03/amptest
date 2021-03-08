@@ -1,29 +1,114 @@
 
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { createContext } from 'react';
+
 import { Redirect, Route, withRouter } from 'react-router-dom';
 
-const mapStateToProps = state => ({
-  loggedIn: Boolean(state.session.currentUser),
-});
+const authContext = createContext();
 
-const Auth = ({ component: Component, path, loggedIn }) => (
-  <Route
-    path={path}
-    render={props => (
-    loggedIn ? <Redirect to="/" /> : <Component {...props} />
-    )}
-  />
-);
+function ProvideAuth({ children }) {
+  const auth = useProvideAuth();
+  return (
+    <authContext.Provider value={auth}>
+      {children}
+    </authContext.Provider>
+  );
+}
 
-const Protected = ({ component: Component, path, loggedIn }) => (
-  <Route
-    path={path}
-    render={props => (
-    loggedIn ? <Component {...props} /> : <Redirect to="/signup" />
-    )}
-  />
-);
+function useAuth() {
+  return useContext(authContext);
+}
 
-export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
-export const ProtectedRoute = withRouter(connect(mapStateToProps, undefined)(Protected));
+function useProvideAuth() {
+  const [user, setUser] = useState(null);
+
+  const signin = cb => {
+    return fakeAuth.signin(() => {
+      setUser("user");
+      cb();
+    });
+  };
+
+  const signout = cb => {
+    return fakeAuth.signout(() => {
+      setUser(null);
+      cb();
+    });
+  };
+
+  return {
+    user,
+    signin,
+    signout
+  };
+}
+
+function AuthButton() {
+  let history = useHistory();
+  let auth = useAuth();
+
+  return auth.user ? (
+    <p>
+      Welcome!{" "}
+      <button
+        onClick={() => {
+          auth.signout(() => history.push("/"));
+        }}
+      >
+        Sign out
+      </button>
+    </p>
+  ) : (
+    <p>You are not logged in.</p>
+  );
+}
+
+// A wrapper for <Route> that redirects to the login
+// screen if you're not yet authenticated.
+function PrivateRoute({ children, ...rest }) {
+  let auth = useAuth();
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        auth.user ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
+
+function PublicPage() {
+  return <h3>Public</h3>;
+}
+
+function ProtectedPage() {
+  return <h3>Protected</h3>;
+}
+
+function LoginPage() {
+  let history = useHistory();
+  let location = useLocation();
+  let auth = useAuth();
+
+  let { from } = location.state || { from: { pathname: "/" } };
+  let login = () => {
+    auth.signin(() => {
+      history.replace(from);
+    });
+  };
+
+  return (
+    <div>
+      <p>You must log in to view the page at {from.pathname}</p>
+      <button onClick={login}>Log in</button>
+    </div>
+  );
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -60,11 +61,17 @@ export default function AppHeaderBar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const dispatch = useDispatch();
 
   const handleToggle = (event) => {
-    setAuth(!auth);
+    // setAuth(!auth);
     setAnchorEl(event.currentTarget);
   };
+
+  const handleLogin = () => {
+    //mocking login
+    dispatch(actionTypes)
+  }
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -129,7 +136,7 @@ export default function AppHeaderBar() {
             </div>
           )}
           {!auth &&
-            <Button variant="contained" className={classes.sign_in} onClick={handleToggle}>Sign In!</Button>
+            <Button variant="contained" className={classes.sign_in} onClick={() => dispatch({ type: sign_in }) }>Sign In!</Button>
           }
         </Toolbar>
       </AppBar>
