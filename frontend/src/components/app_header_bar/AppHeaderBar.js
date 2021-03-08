@@ -13,6 +13,7 @@ import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import Divider from '@material-ui/core/Divider';
 import Logo from './facetslogo.png';
+import {actionTypes} from '../../reducers/auth/actionTypes'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,9 +62,11 @@ const useStyles = makeStyles((theme) => ({
 export default function AppHeaderBar() {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
+  const tempAuth = useSelector(state => state.auth.authenticated)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   let history = useHistory();
+  const dispatch = useDispatch();
 
   const handleToggle = (event) => {
     // setAuth(!auth);
@@ -75,6 +78,7 @@ export default function AppHeaderBar() {
     // need to dispatch success here
     setAnchorEl(null);
     setAuth(!auth);
+    dispatch({ type: actionTypes.TEMP_LOGIN })
     history.push("/dashboard")
   }
 
@@ -85,6 +89,7 @@ export default function AppHeaderBar() {
   const handleLogout = () => {
     setAnchorEl(null);
     setAuth(!auth);
+    dispatch({ type: actionTypes.TEMP_LOGOUT })
     history.push("/login")
   };
 
@@ -94,14 +99,16 @@ export default function AppHeaderBar() {
       <AppBar position="static" className={classes.root}>
         <Toolbar className={classes.toolbar}>
           <Box>
-            <img src={Logo} alt="Logo" className={classes.logo} />
+            <RouterLink to="/dashboard">
+              <img src={Logo} alt="Logo" className={classes.logo} />
+            </RouterLink>
           </Box>
           <Box className={classes.links_box}>
             <Link component={RouterLink} className={classes.top_link} to="/dashboard">Dashboard</Link>
-            <Link className={classes.top_link}>Work Flow</Link>
+            <Link component={RouterLink} className={classes.top_link}>Work Flow</Link>
           </Box>
 
-          {auth && (
+          {tempAuth && (
             <div className={classes.menu_button_container}>
               <Button
                 variant="contained"
@@ -141,7 +148,7 @@ export default function AppHeaderBar() {
               </Menu>
             </div>
           )}
-          {!auth &&
+          {!tempAuth &&
             <Button variant="contained" className={classes.sign_in} onClick={handleLogin}>Sign In!</Button>
           }
         </Toolbar>

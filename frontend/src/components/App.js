@@ -1,32 +1,26 @@
 import React from 'react';
 
-import { Redirect, useLocation, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 
 import AppHeaderBar from './app_header_bar/AppHeaderBar.js';
 import Box from '@material-ui/core/Box';
-import { AuthRoute, ProtectedRoute } from '../utils/route_util';
-import { useDispatch, useSelector } from "react-redux";
 
-import LandingPage from './landing_page/LandingPage';
+
+import LoginPage from './login_page/LoginPage';
 import DashboardPage from './dashboard_page/DashboardPage.js';
 import SignupPage from './signup_page/SignupPage';
-import LoginPage from './login_page/LoginPage';
+import LandingPage from './landing_page/LandingPage';
 
 
 
 export default function App() {
-  const location = useLocation();
-  
-  const authenticated = useSelector((state) => state.auth.authenticated);
-
-  const withAuth = (component) => {
+  const withAuth = (Component) => {
     if (!authenticated) {
-      parseQueryParamsAndShowMessage();
-      return <Redirect to={"/login"} />;
+      return <Redirect to={Routes.LOGIN} />;
     }
 
-    return component;
+    return Component;
   };
 
   return (
