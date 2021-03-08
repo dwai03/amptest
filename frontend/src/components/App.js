@@ -6,7 +6,7 @@ import { Redirect, useLocation, Route, Switch } from "react-router-dom";
 import AppHeaderBar from './app_header_bar/AppHeaderBar.js';
 import Box from '@material-ui/core/Box';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
-
+import { useDispatch, useSelector } from "react-redux";
 
 import LandingPage from './landing_page/LandingPage';
 import DashboardPage from './dashboard_page/DashboardPage.js';
@@ -33,7 +33,7 @@ export default function App() {
     <div>
       <AppHeaderBar />
       <Switch>
-        <Route exact path="/dashboard" render={()=> withAuth(DashboardPage)} />
+        <Route exact path="/dashboard" component={DashboardPage} />
         <Route exact path="/signup" component={SignupPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route path="/" component={LandingPage} />
