@@ -61,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AppHeaderBar() {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
   const tempAuth = useSelector(state => state.auth.authenticated)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -77,7 +76,6 @@ export default function AppHeaderBar() {
     //mocking login
     // need to dispatch success here
     setAnchorEl(null);
-    setAuth(!auth);
     dispatch({ type: actionTypes.TEMP_LOGIN })
     history.push("/dashboard")
   }
@@ -88,7 +86,6 @@ export default function AppHeaderBar() {
 
   const handleLogout = () => {
     setAnchorEl(null);
-    setAuth(!auth);
     dispatch({ type: actionTypes.TEMP_LOGOUT })
     history.push("/login")
   };
