@@ -16,47 +16,49 @@ import OtherPage from './other_page/OtherPage';
 import WorkflowPage from './workflow_page/WorkflowPage';
 import ProfilePage from './profile_page/ProfilePage';
 
-function PrivateRoute({ children, ...rest }) {
-  const tempAuth = useSelector(state => state.auth.authenticated)
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        tempAuth ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location }
-            }}
-          />
-        )
-      }
-    />
-  );
-}
+import { AuthRoute, PrivateRoute } from '../utils/route_util';
 
-function AuthRoute({ children, ...rest }) {
-  const tempAuth = useSelector(state => state.auth.authenticated)
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        !tempAuth ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/dashboard",
-              state: { from: location }
-            }}
-          />
-        )
-      }
-    />
-  );
-}
+// function PrivateRoute({ children, ...rest }) {
+//   const tempAuth = useSelector(state => state.auth.authenticated)
+//   return (
+//     <Route
+//       {...rest}
+//       render={({ location }) =>
+//         tempAuth ? (
+//           children
+//         ) : (
+//           <Redirect
+//             to={{
+//               pathname: "/login",
+//               state: { from: location }
+//             }}
+//           />
+//         )
+//       }
+//     />
+//   );
+// }
+
+// function AuthRoute({ children, ...rest }) {
+//   const tempAuth = useSelector(state => state.auth.authenticated)
+//   return (
+//     <Route
+//       {...rest}
+//       render={({ location }) =>
+//         !tempAuth ? (
+//           children
+//         ) : (
+//           <Redirect
+//             to={{
+//               pathname: "/dashboard",
+//               state: { from: location }
+//             }}
+//           />
+//         )
+//       }
+//     />
+//   );
+// }
 
 export default function App() {
 
