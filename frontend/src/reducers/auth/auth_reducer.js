@@ -2,7 +2,7 @@ import { actionTypes } from "./actionTypes";
 
 
 const INITIAL_STATE = {
-  authenticated: true,
+  authenticated: false,
 };
 
 export default function authReducer(state = INITIAL_STATE, action) {

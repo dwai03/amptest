@@ -9,7 +9,7 @@ import LoginPage from './login_page/LoginPage';
 import DashboardPage from './dashboard_page/DashboardPage.js';
 import SignupPage from './signup_page/SignupPage';
 import LandingPage from './landing_page/LandingPage';
-import OtherPage from './other_page/OtherPage';
+import BecomeCreatorPage from './become_creator_page/BecomeCreatorPage';
 import WorkflowPage from './workflow_page/WorkflowPage';
 import ProfilePage from './profile_page/ProfilePage';
 
@@ -36,8 +36,8 @@ export default function App() {
         <AuthRoute exact path="/login">
           <LoginPage />
         </AuthRoute>
-        <Route path="/other">
-          <OtherPage />
+        <Route path="/become-creator">
+          <BecomeCreatorPage />
         </Route>
         <AuthRoute path="/">
           <LandingPage />

@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme)=> ({
     fontFamily: "Tenon",
     fontWeight: "bold",
     fontSize: 36,
-    color: theme.palette.actionBlue,
+    color: theme.palette.primary,
     textTransform: "uppercase",
     lineHeight: 1,
   },
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme)=> ({
   },
 }));
 
-export default function LandingPage() {
+export default function BecomeCreatorPage() {
   const classes = useStyles();
   let history = useHistory();
   return (
@@ -80,25 +80,24 @@ export default function LandingPage() {
       <CssBaseline />
         <Box className={classes.container}>
           <Box className={classes.section_1_container}>
-            <div className={classes.message_box}>
-              <div className={classes.message_text}>the future</div>
-              <div className={classes.message_text}>of influencer</div>
-              <div className={classes.message_text}>marketing</div>
-              <div className={classes.message_text}>is here</div>
-              <div className={classes.message_info_line}>Get consumers talking about your brand and buying your products with creator marketing.</div>
+            <div classnName={classes.message_box}>
+              <div className={classes.message_text}>increase your</div>
+              <div className={classes.message_text}>impact and</div>
+              <div className={classes.message_text}>grow as a</div>
+              <div className={classes.message_text}>creator</div>
+              <div className={classes.message_info_line}>You are always in control. Collaborate with brands that actually resonate with your specific vibe and audience.</div>
               <div>
-                <Button variant="contained" className={classes.action_button} onClick={() => {history.push("/become-creator")}}>Learn More</Button>
+                <Button variant="contained" className={classes.action_button} onClick={() => {history.push("/signup")}}>Sign Up</Button>
               </div>
             </div>
           </Box>
           <Box className={classes.section_2_container}>
           <div className={classes.message_box_2}>
-              <div className={classes.message_text_2}>only</div>
-              <div className={classes.message_text_2}>authentic</div>
-              <div className={classes.message_text_2}>matches</div>
-              <div className={classes.message_info_line_2}>Reaching new audiences and increasing ROI from your brand campaigns is at the heart of what we do. Quickly match to thousands of influencers based on their passions and lifestyles, ensuring an authentic expression of your brand that drives new customer sales.</div>
+              <div className={classes.message_text_2}>"Thank you"</div>
+              <div className={classes.message_text_2}>facets"</div>
+              <div className={classes.message_info_line_2}>Something about how we think about the creators in ways that platforms just have not even thought of yet! Something clever.</div>
               <div>
-                <Button variant="contained" className={classes.action_button} onClick={() => {history.push("/become-creator")}}>Learn More</Button>
+                <Button variant="contained" className={classes.action_button} onClick={() => {history.push("/signup")}}>Sign Up</Button>
               </div>
             </div>
           </Box>

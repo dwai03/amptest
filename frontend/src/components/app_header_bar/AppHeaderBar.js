@@ -129,15 +129,13 @@ export default function AppHeaderBar() {
            { tempAuth && (
              <Box className={classes.links_box}>
               <Link component={RouterLink} className={classes.top_link} to="/dashboard">Dashboard</Link>
-              <Link component={RouterLink} className={classes.top_link} to="/workflow">Work Flow</Link>
+              <Link component={RouterLink} className={classes.top_link} to="/workflow">Campaigns</Link>
             </Box>
            )}
            { !tempAuth && (
              <Box className={classes.links_box}>
               <Link component={RouterLink} className={classes.top_link}>How It Works</Link>
-              <Link component={RouterLink} className={classes.top_link}>Brand and Agencies</Link>
-              <Link component={RouterLink} className={classes.top_link}>Learn</Link>
-              <Link component={RouterLink} className={classes.top_link}>Pricing</Link>
+              <Link component={RouterLink} className={classes.top_link} to="/become-creator">Learn</Link>
             </Box>
            )}
          
