@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
-import App from './App';
-import theme from './theme';
-import { Provider, HashRouter } from 'react-redux';
 
-ReactDOM.render(
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-          <App />
-    </ThemeProvider>,
+import configureStore from './store/store';
+import Root from './components/root';
 
-  document.querySelector('#root'),
-);
+document.addEventListener('DOMContentLoaded', () => {
+  const store = configureStore();
+  const root = document.getElementById('root');
+
+  ReactDOM.render(<Root store={store}/>, root)
+});

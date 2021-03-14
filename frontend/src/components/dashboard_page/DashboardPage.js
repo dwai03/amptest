@@ -68,8 +68,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Dashboard() {
-  console.log(theme.palette);
+export default function DashboardPage() {
   const classes = useStyles();
   return (
     <React.Fragment>

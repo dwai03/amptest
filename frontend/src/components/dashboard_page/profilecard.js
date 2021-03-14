@@ -12,8 +12,6 @@ import ListItem from '@material-ui/core/ListItem';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 650,
-    backgroundColor: '#363636',
-    color: 'white',
     paddingTop: theme.spacing(4),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
@@ -33,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   },
   subheader_item: {
     padding: 0,
-    color: "lightgrey",
   },
   card_content: {
     padding: 8,
