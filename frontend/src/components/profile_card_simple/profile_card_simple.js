@@ -11,11 +11,6 @@ import ListItem from '@material-ui/core/ListItem';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 500,
-    color: 'black',
-    paddingTop: theme.spacing(4),
-    paddingLeft: theme.spacing(4),
-    paddingRight: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
     border: "none",
     backgroundColor: "#f2f2f2",
   },
