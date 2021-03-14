@@ -1,12 +1,9 @@
 import React from 'react';
+import { Route, Switch } from "react-router-dom";
 
-import { Route, Switch, Redirect } from "react-router-dom";
-import { useSelector } from "react-redux";
-
-
-import AppHeaderBar from './app_header_bar/AppHeaderBar.js';
 import Box from '@material-ui/core/Box';
 
+import AppHeaderBar from './app_header_bar/AppHeaderBar.js';
 
 import LoginPage from './login_page/LoginPage';
 import DashboardPage from './dashboard_page/DashboardPage.js';
@@ -18,55 +15,12 @@ import ProfilePage from './profile_page/ProfilePage';
 
 import { AuthRoute, PrivateRoute } from '../utils/route_util';
 
-// function PrivateRoute({ children, ...rest }) {
-//   const tempAuth = useSelector(state => state.auth.authenticated)
-//   return (
-//     <Route
-//       {...rest}
-//       render={({ location }) =>
-//         tempAuth ? (
-//           children
-//         ) : (
-//           <Redirect
-//             to={{
-//               pathname: "/login",
-//               state: { from: location }
-//             }}
-//           />
-//         )
-//       }
-//     />
-//   );
-// }
-
-// function AuthRoute({ children, ...rest }) {
-//   const tempAuth = useSelector(state => state.auth.authenticated)
-//   return (
-//     <Route
-//       {...rest}
-//       render={({ location }) =>
-//         !tempAuth ? (
-//           children
-//         ) : (
-//           <Redirect
-//             to={{
-//               pathname: "/dashboard",
-//               state: { from: location }
-//             }}
-//           />
-//         )
-//       }
-//     />
-//   );
-// }
-
 export default function App() {
 
   return (
     <div>
       <AppHeaderBar />
       <Switch>
-
         <PrivateRoute exact path="/dashboard">
           <DashboardPage />
         </PrivateRoute>
@@ -88,7 +42,6 @@ export default function App() {
         <AuthRoute path="/">
           <LandingPage />
         </AuthRoute>
-
 
         <Box height={20} width={1} bgcolor="deeppink"></Box>
       </Switch>
