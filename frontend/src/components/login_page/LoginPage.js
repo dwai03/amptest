@@ -64,7 +64,7 @@ export default function LoginPage() {
     //mocking login
     // need to dispatch success here
     dispatch({ type: actionTypes.TEMP_LOGIN })
-    history.push("/dashboard")
+    history.push("/")
   }
   return (
     <React.Fragment>

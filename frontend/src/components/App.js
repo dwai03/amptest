@@ -13,6 +13,8 @@ import DashboardPage from './dashboard_page/DashboardPage.js';
 import SignupPage from './signup_page/SignupPage';
 import LandingPage from './landing_page/LandingPage';
 import OtherPage from './other_page/OtherPage';
+import WorkflowPage from './workflow_page/WorkflowPage';
+import ProfilePage from './profile_page/ProfilePage';
 
 function PrivateRoute({ children, ...rest }) {
   const tempAuth = useSelector(state => state.auth.authenticated)
@@ -63,8 +65,14 @@ export default function App() {
       <AppHeaderBar />
       <Switch>
 
-        <PrivateRoute path="/dashboard">
+        <PrivateRoute exact path="/dashboard">
           <DashboardPage />
+        </PrivateRoute>
+        <PrivateRoute exact path="/profile">
+          <ProfilePage />
+        </PrivateRoute>
+        <PrivateRoute exact path="/workflow">
+          <WorkflowPage />
         </PrivateRoute>
         <AuthRoute exact path="/signup">
           <SignupPage />
@@ -72,11 +80,11 @@ export default function App() {
         <AuthRoute exact path="/login">
           <LoginPage />
         </AuthRoute>
-        <Route path="/landing">
-          <LandingPage />
+        <Route path="/other">
+          <OtherPage />
         </Route>
         <AuthRoute path="/">
-          <OtherPage />
+          <LandingPage />
         </AuthRoute>
 
 

@@ -94,8 +94,19 @@ export default function AppHeaderBar() {
     history.push("/signup")
   }
 
-  const handleClose = () => {
+  const handleProfile= () => {
     setAnchorEl(null);
+    history.push("/profile")
+
+  };
+  const handleSettings = () => {
+    setAnchorEl(null);
+
+  };
+  const handleClose = () => {
+    
+    setAnchorEl(null);
+
   };
 
   const handleLogout = () => {
@@ -118,7 +129,7 @@ export default function AppHeaderBar() {
            { tempAuth && (
              <Box className={classes.links_box}>
               <Link component={RouterLink} className={classes.top_link} to="/dashboard">Dashboard</Link>
-              <Link component={RouterLink} className={classes.top_link}>Work Flow</Link>
+              <Link component={RouterLink} className={classes.top_link} to="/workflow">Work Flow</Link>
             </Box>
            )}
            { !tempAuth && (
@@ -164,8 +175,8 @@ export default function AppHeaderBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>Settings</MenuItem>
+                <MenuItem onClick={handleProfile}>Profile</MenuItem>
+                <MenuItem onClick={handleSettings}>Settings</MenuItem>
                 <Divider />
                 <MenuItem onClick={handleLogout}>Log Out</MenuItem>
               </Menu>
