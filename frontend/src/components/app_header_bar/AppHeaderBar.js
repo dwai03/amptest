@@ -14,6 +14,7 @@ import Link from '@material-ui/core/Link';
 import Divider from '@material-ui/core/Divider';
 import Logo from './facetslogo.png';
 import {actionTypes} from '../../reducers/auth/actionTypes'
+import { Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,6 +38,15 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row-reverse",
     flexGrow: 1,
     alignContent: "end",
+  },
+  button_box_container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    marginBottom: 18,
+  },
+  button_box_link: {
+    color: "white"
   },
   top_link: {
     color: "white",
@@ -76,8 +86,12 @@ export default function AppHeaderBar() {
     //mocking login
     // need to dispatch success here
     setAnchorEl(null);
-    dispatch({ type: actionTypes.TEMP_LOGIN })
-    history.push("/dashboard")
+    // dispatch({ type: actionTypes.TEMP_LOGIN })
+    history.push("/login")
+  }
+
+  const handleSignup = () => {
+    history.push("/signup")
   }
 
   const handleClose = () => {
@@ -87,7 +101,7 @@ export default function AppHeaderBar() {
   const handleLogout = () => {
     setAnchorEl(null);
     dispatch({ type: actionTypes.TEMP_LOGOUT })
-    history.push("/login")
+   // history push /login?
   };
 
 
@@ -96,17 +110,29 @@ export default function AppHeaderBar() {
       <AppBar position="static" className={classes.root}>
         <Toolbar className={classes.toolbar}>
           <Box>
-            <RouterLink to="/dashboard">
+            <RouterLink to="/">
               <img src={Logo} alt="Logo" className={classes.logo} />
             </RouterLink>
           </Box>
-          <Box className={classes.links_box}>
-            <Link component={RouterLink} className={classes.top_link} to="/dashboard">Dashboard</Link>
-            <Link component={RouterLink} className={classes.top_link}>Work Flow</Link>
-          </Box>
+          
+           { tempAuth && (
+             <Box className={classes.links_box}>
+              <Link component={RouterLink} className={classes.top_link} to="/dashboard">Dashboard</Link>
+              <Link component={RouterLink} className={classes.top_link}>Work Flow</Link>
+            </Box>
+           )}
+           { !tempAuth && (
+             <Box className={classes.links_box}>
+              <Link component={RouterLink} className={classes.top_link}>How It Works</Link>
+              <Link component={RouterLink} className={classes.top_link}>Brand and Agencies</Link>
+              <Link component={RouterLink} className={classes.top_link}>Learn</Link>
+              <Link component={RouterLink} className={classes.top_link}>Pricing</Link>
+            </Box>
+           )}
+         
 
           {tempAuth && (
-            <div className={classes.menu_button_container}>
+            <Box className={classes.menu_button_container}>
               <Button
                 variant="contained"
                 color="secondary"
@@ -143,10 +169,17 @@ export default function AppHeaderBar() {
                 <Divider />
                 <MenuItem onClick={handleLogout}>Log Out</MenuItem>
               </Menu>
-            </div>
+            </Box>
           )}
           {!tempAuth &&
-            <Button variant="contained" className={classes.sign_in} onClick={handleLogin}>Sign In!</Button>
+          <Box className={classes.button_box_container}>
+            <div>
+              <Link component={RouterLink} className={classes.button_box_link} to="/login">Aleady a creator? Sign in</Link>
+            </div>
+            <div>
+              <Button variant="contained" className={classes.sign_in} onClick={handleSignup}>Sign Up!</Button>
+            </div>
+          </Box>
           }
         </Toolbar>
       </AppBar>

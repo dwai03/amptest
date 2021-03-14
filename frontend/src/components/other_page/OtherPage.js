@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme)=> ({
   }
 }));
 
-export default function LandingPage() {
+export default function OtherPage() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -19,11 +19,9 @@ export default function LandingPage() {
       <Container maxWidth="md">
         <Box className={classes.container}>
           <Box>
-            Section 1
+            Other Page
           </Box>
-          <Box>
-            Section 2
-          </Box>
+ 
         </Box>
       </Container>
     </React.Fragment>
