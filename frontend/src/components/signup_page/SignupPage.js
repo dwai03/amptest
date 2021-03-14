@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,7 +15,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import {actionTypes} from '../../reducers/auth/actionTypes'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -40,6 +42,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignupPage() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  let history = useHistory();
+  
+  // mock a quick login until better sign up modal/flow in place
+  const handleLogin = () => {
+    //mocking login
+    // need to dispatch success here
+    dispatch({ type: actionTypes.TEMP_LOGIN })
+    history.push("/")
+  }
   return (
     <React.Fragment>
       <Container component="main" maxWidth="xs">
@@ -112,6 +124,7 @@ export default function SignupPage() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={handleLogin}
             >
               Sign Up
           </Button>
