@@ -115,7 +115,7 @@ export default function AppHeaderBar() {
    // history push /login?
   };
 
-
+  // App Header Bar currrently has the two options side by side whether logged in or not
   return (
     <React.Fragment>
       <AppBar position="static" className={classes.root}>

@@ -21,28 +21,32 @@
   - Auth/Protected Routes to control authorized users/access in /utils/route_util
 
 - CSS will be through MaterialUI, may not need loaders actually
+- `theme.js` sets basic colors palette for easy reference
 - Page Components all built on MaterialUI base components unless explicity noted
 
-Still Needs:
+Needs before going live:
 - add api key and test connection to backend
 - connect through auth login and update redux state to hold user info and proper auth control
+- 'request loading' handling for pages while images and larger content loads
 - utilize local storage/cookies to hold session info and load into state store on app load
-
 - add sign up modals and wire in all the social media auths and token handlings
-
-- page layouts refactored to a grid system
+- finish out static marketing pages and ensure contact links exist
 
 Eventually:
 - will need a testing framework 
     - unit
     - integration
     - e2e
-
+- page layouts refactored to a grid system
+- react components need to be better organized, maybe atomic system
+- set all static content (marketing pages) as constants in a single file for easier updating
 ### Current Pages
 
-New Vistors
+New Visitors
 `/` main marketing and landing page, but will force user to `/dashboard` if logged in, CTA Learn More
+  - status: halfway in, needs image assets, additional styling marketing footer
 `/become-creator` CTA Sign Up
+  - status: 25% in, needs image assets, additional styling
 
 `/signup` single page w/form as placeholder for mocks
   - mock only, signup currently logs you in to dashboard
