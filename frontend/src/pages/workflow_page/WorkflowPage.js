@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import ProfileCardSimple from '../profile_card_simple/profile_card_simple';
+import ProfileCardSimple from '../../components/profile_card_simple/profile_card_simple';
 
 const useStyles = makeStyles((theme) => ({
     root: {

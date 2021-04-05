@@ -18,7 +18,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import EventIcon from '@material-ui/icons/Event';
 import HistoryIcon from '@material-ui/icons/History';
 import IconButton from '@material-ui/core/IconButton';
-import theme from '../theme';
+import theme from '../../theme';
 import { flexbox } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({

@@ -16,4 +16,5 @@ export default ({ store }) => (
       </HashRouter>
     </ThemeProvider>
   </Provider>
+  
 );

@@ -3,17 +3,18 @@ import { Route, Switch } from "react-router-dom";
 
 import Box from '@material-ui/core/Box';
 
-import AppHeaderBar from './app_header_bar/AppHeaderBar.js';
+import AppHeaderBar from './components/app_header_bar/AppHeaderBar.js';
 
-import LoginPage from './login_page/LoginPage';
-import DashboardPage from './dashboard_page/DashboardPage.js';
-import SignupPage from './signup_page/SignupPage';
-import LandingPage from './landing_page/LandingPage';
-import BecomeCreatorPage from './become_creator_page/BecomeCreatorPage';
-import WorkflowPage from './workflow_page/WorkflowPage';
-import ProfilePage from './profile_page/ProfilePage';
+import LoginPage from './pages/login_page/LoginPage';
+import DashboardPage from './pages/dashboard_page/DashboardPage.js';
+import SignupPage from './pages/signup_page/SignupPage';
+import LandingPage from './pages/landing_page/LandingPage';
+import BecomeCreatorPage from './pages/become_creator_page/BecomeCreatorPage';
+import WorkflowPage from './pages/workflow_page/WorkflowPage';
+import ProfilePage from './pages/profile_page/ProfilePage';
+import Footer from './components/common/Footer'
 
-import { AuthRoute, PrivateRoute } from '../utils/route_util';
+import { AuthRoute, PrivateRoute } from './utils/route_util';
 
 export default function App() {
 
