@@ -43,9 +43,9 @@ export default function App() {
         <AuthRoute path="/">
           <LandingPage />
         </AuthRoute>
-
         <Box height={20} width={1} bgcolor="deeppink"></Box>
       </Switch>
+      <Footer />
     </div>
   );
 }
