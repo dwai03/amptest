@@ -1,40 +1,39 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './frontend/src/index.js',
+  entry: "./frontend/src/index.js",
   module: {
     rules: [
       {
         test: [/\.jsx?$/],
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-            presets: ['@babel/preset-env', '@babel/react']
-        },
+          presets: ["@babel/preset-env", "@babel/react"]
+        }
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        test: /\.(scss|css)$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
+        type: "asset/resource"
+      }
     ]
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   resolve: {
-    extensions: ['.js', '.jsx', '*']
+    extensions: [".js", ".jsx", "*"]
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "frontend", "public/"),
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
-    hot: true,
-  },
+    hot: true
+  }
 };
-  
