@@ -7,7 +7,6 @@
     "@material-ui/icons": "^4.11.2",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.2",
-    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -16,11 +15,17 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "style-loader": "^2.0.0",
-    "webpack": "^5.23.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "start": "webpack serve --mode development"
+    "start": "webpack serve --mode development",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.31.2"
   }
 }
