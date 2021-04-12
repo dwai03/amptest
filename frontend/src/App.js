@@ -19,7 +19,7 @@ import { AuthRoute, PrivateRoute } from "./utils/route_util";
 export default function App() {
   return (
     <div>
-      <AppHeaderBar />
+      <NavBar />
       <Switch>
         <PrivateRoute exact path="/dashboard">
           <DashboardPage />
