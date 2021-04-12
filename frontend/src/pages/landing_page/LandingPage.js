@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Button, CssBaseline } from '@material-ui/core';
+import Footer from '../../../src/components/common/Footer'
 
 const useStyles = makeStyles((theme)=> ({
   container: {
@@ -103,6 +104,7 @@ export default function LandingPage() {
             </div>
           </Box>
         </Box>
+        <Footer />
     </React.Fragment>
   )
 }

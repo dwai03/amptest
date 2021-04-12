@@ -44,7 +44,7 @@ export default function App() {
         </AuthRoute>
         <Box height={20} width={1} bgcolor="deeppink"></Box>
       </Switch>
-      <Footer />
+      {/* Footer isn't everywhere<Footer /> */}
     </div>
   );
 }
