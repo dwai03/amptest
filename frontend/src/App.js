@@ -9,10 +9,12 @@ import LoginPage from "./pages/login_page/LoginPage";
 import DashboardPage from "./pages/dashboard_page/DashboardPage.js";
 import SignupPage from "./pages/signup_page/SignupPage";
 import LandingPage from "./pages/landing_page/LandingPage";
+import Landing_page from "./pages/landing_page/Landing_page";
 import BecomeCreatorPage from "./pages/become_creator_page/BecomeCreatorPage";
 import WorkflowPage from "./pages/workflow_page/WorkflowPage";
 import ProfilePage from "./pages/profile_page/ProfilePage";
 import Footer from "./components/common/Footer";
+
 
 import { AuthRoute, PrivateRoute } from "./utils/route_util";
 
@@ -41,10 +43,12 @@ export default function App() {
         </Route>
         <AuthRoute path="/">
           <LandingPage />
+          <Landing_page />
         </AuthRoute>
         <Box height={20} width={1} bgcolor="deeppink"></Box>
       </Switch>
       {/* Footer isn't everywhere<Footer /> */}
+      
     </div>
   );
 }
