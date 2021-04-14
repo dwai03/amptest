@@ -42,7 +42,6 @@ export default function App() {
           <BecomeCreatorPage />
         </Route>
         <AuthRoute path="/">
-          <LandingPage />
           <Landing_page />
         </AuthRoute>
         <Box height={20} width={1} bgcolor="deeppink"></Box>

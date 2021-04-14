@@ -1,0 +1,38 @@
+.image {
+    position: relative;
+    width: 100%;
+}
+.landingHeaderTitle {
+    font-Family: Tenon;
+    font-Weight: bold;
+    font-Size: 64px;
+    color: white;
+    background: black;
+    text-Transform: uppercase;
+    line-Height: 1;
+    white-space: pre-wrap;
+}
+.landingHeaderText {
+    font-Family: Tenon;
+    font-Size: 18px;
+    color: white;
+    background: black;
+    line-Height: 1;
+    white-space: pre-wrap;
+}
+.landingBodyTitle {
+    font-Family: Tenon;
+    font-Weight: bold;
+    font-Size: 64px;
+    color: #33A8DF;
+    text-Transform: uppercase;
+    line-Height: 1;
+    white-space: pre-wrap;
+}
+.landingBodyText {
+    font-Family: Tenon;
+    font-Size: 22px;
+    color: #545454;
+    line-Height: 1;
+    white-space: pre-wrap;
+}
