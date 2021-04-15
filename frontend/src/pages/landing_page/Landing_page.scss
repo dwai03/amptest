@@ -1,24 +1,29 @@
 .image {
     position: relative;
-    width: 100%;
+    width: auto;
+    height: auto;
+    font-size: 0;
 }
 .landingHeaderTitle {
     font-Family: Tenon;
     font-Weight: bold;
     font-Size: 64px;
     color: white;
-    background: black;
     text-Transform: uppercase;
     line-Height: 1;
+    letter-spacing: -0.64px;
     white-space: pre-wrap;
+    position: absolute;
 }
 .landingHeaderText {
     font-Family: Tenon;
     font-Size: 18px;
     color: white;
-    background: black;
     line-Height: 1;
     white-space: pre-wrap;
+    letter-spacing: -0.18px;
+    font-Weight: normal;
+    text-transform: none;
 }
 .landingBodyTitle {
     font-Family: Tenon;
@@ -28,11 +33,41 @@
     text-Transform: uppercase;
     line-Height: 1;
     white-space: pre-wrap;
+    position: absolute;
 }
-.landingBodyText {
+.landingBodyTextTop {
     font-Family: Tenon;
     font-Size: 22px;
     color: #545454;
     line-Height: 1;
     white-space: pre-wrap;
+    font-Weight: normal;
+    text-transform: none;
+}
+.landingBodyTextQuote {
+    font-Family: Tenon;
+    font-Size: 50px;
+    color: black;
+    background-color: white;
+    line-Height: 1;
+    white-space: pre-wrap;
+    font-Weight: bold;
+}
+.landingBodyTextQuoted {
+    font-Family: Tenon;
+    font-Size: 15px;
+    color: black;
+    line-Height: 1;
+    white-space: pre-wrap;
+    font-Weight: normal;
+    text-transform: none;
+}
+.landingBodyTextQuoteReview {
+    font-Family: Tenon;
+    font-Size: 18px;
+    color: black;
+    line-Height: 1;
+    white-space: pre-wrap;
+    font-Weight: normal;
+    text-transform: none;
 }
