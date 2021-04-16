@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.scss'
+import '../../stylesheets/module.scss'
 import PropTypes from 'prop-types'
 
 // Button for Sign up and Learn more on the Landing Page

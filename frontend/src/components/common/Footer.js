@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '@material-ui/core/Link';
 import { Link as RouterLink } from 'react-router-dom';
-import './Footer.scss';
+import '../../stylesheets/layout.scss';
 import Button from './Button';
 import PropTypes from 'prop-types'
 
@@ -18,7 +18,7 @@ const Footer = ({footertype}) => {
                     <Link component={RouterLink} to="/dashboard">Support</Link>    
                 </li>
                 <li>
-                    <Link component={RouterLink} to="/workflow">Sign In</Link>
+                    <Link component={RouterLink} to="/signin">Sign In</Link>
                 </li>
             </ul>     
             <ul className='footercolumn'>Creators & Models

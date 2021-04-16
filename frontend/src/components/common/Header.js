@@ -1,7 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import Logo from "./facetslogo.png";
-import "./NavBar.scss";
+import "../../stylesheets/layout.scss";
 
 const navs = {
   HowItWorks: { display: "How It Works", url: "/" },

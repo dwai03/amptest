@@ -1,0 +1,84 @@
+.nav-bar {
+    background-color: black;
+    display: flex;
+    .nav-logo {
+      .nav-img {
+        width: 10em;
+        margin: 0.5em 0 0.5em 1em;
+      }
+    }
+    @media (min-width: 48.6rem) {
+      .nav-links {
+        display: flex;
+        position: absolute;
+        right: 0;
+        .nav-pages {
+          a {
+            margin-right: 1em;
+            color: white;
+            text-decoration: none;
+          }
+          margin-top: 2.8em;
+        }
+        .sign-in-btn {
+          margin-top: 0.8em;
+          a {
+            color: white;
+          }
+          button {
+            height: 100%;
+            width: 60%;
+            background-color: #ed1470;
+            border-radius: 5px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+.landingfooter {
+    background-Color: black;
+    
+    font: normal normal bold 22px/24px Tenon;
+    color: white;
+    height: 382px;
+    width: 100%;
+    padding: 91px 118px 0px 110px;
+    list-style-type: none;
+    
+    a {
+        font: normal normal normal 14px/37px Tenon;
+        color: white;
+        list-style-type: none;
+    }
+    a:hover{
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .footercolumn {
+        vertical-align: text-top; 
+        list-style-type: none;
+    }
+    ul {
+        display: inline-block;
+        list-style-type: none;
+    }
+}
+.landingcreatorfooterbar{
+    background-color: #ED1470;
+    color: #ED1470;
+    height: 41;
+    width: 100%;
+}
+.landingcampaignfooterbar{
+    background-color:blue;
+    color: blue;
+    height: 41;
+    width: 100%;
+}
+
+.footercolumnright{
+    vertical-align: text-top; 
+    list-style-type: none;
+    float: right;
+}
