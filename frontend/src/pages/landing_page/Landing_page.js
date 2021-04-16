@@ -1,12 +1,12 @@
 import React from 'react'
-import './Landing_Page.scss'
+import '../../stylesheets/layout.scss'
 import Footer from './../../components/common/Footer'
 import Button from './../../components/common/Button'
 
 const Landing_page = () => {
     return (
         <div >
-            <div>    
+            <div className = 'landingHeadercontainer'>    
                 <div className = 'landingHeaderTitle'>The Future {"\n"}
                                                         of Influencer {"\n"}
                                                         Marketing {"\n"}
@@ -17,7 +17,7 @@ const Landing_page = () => {
                     </div>
                 </div>
             </div>
-            <div>
+        <div>  
                 <img src={require("../../../public/assets/LandingHeaderBackground.jpg")}>
                 </img>
 
