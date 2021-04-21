@@ -7,8 +7,7 @@ import AppHeaderBar from "./components/app_header_bar/AppHeaderBar.js";
 import NavBar from "./components/common/Header.js";
 import LoginPage from "./pages/login_page/LoginPage";
 import DashboardPage from "./pages/dashboard_page/DashboardPage.js";
-import SignupPage from "./pages/signup_page/SignupPage";
-import LandingPage from "./pages/landing_page/LandingPage";
+import Signup_page from "./pages/signup_page/Signup_page";
 import Landing_page from "./pages/landing_page/Landing_page";
 import BecomeCreatorPage from "./pages/become_creator_page/BecomeCreatorPage";
 import WorkflowPage from "./pages/workflow_page/WorkflowPage";
@@ -21,27 +20,32 @@ import { AuthRoute, PrivateRoute } from "./utils/route_util";
 export default function App() {
   return (
     <div>
-      <NavBar />
       <Switch>
         <PrivateRoute exact path="/dashboard">
+          <NavBar />  
           <DashboardPage />
         </PrivateRoute>
         <PrivateRoute exact path="/profile">
+          <NavBar />  
           <ProfilePage />
         </PrivateRoute>
         <PrivateRoute exact path="/workflow">
+          <NavBar />  
           <WorkflowPage />
         </PrivateRoute>
         <AuthRoute exact path="/signup">
-          <SignupPage />
+          <Signup_page />
         </AuthRoute>
         <AuthRoute exact path="/login">
+          <NavBar />  
           <LoginPage />
         </AuthRoute>
         <Route path="/become-creator">
+          <NavBar />  
           <BecomeCreatorPage />
         </Route>
         <AuthRoute path="/">
+          <NavBar />  
           <Landing_page />
         </AuthRoute>
         <Box height={20} width={1} bgcolor="deeppink"></Box>
