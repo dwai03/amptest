@@ -15,7 +15,7 @@ const Footer = ({footertype}) => {
                     <Link component={RouterLink} to="/">How It Works</Link>    
                 </li>
                 <li>
-                    <Link component={RouterLink} to="/dashboard">Support</Link>    
+                    <Link component={RouterLink} to="/signup">Support</Link>    
                 </li>
                 <li>
                     <Link component={RouterLink} to="/signin">Sign In</Link>
