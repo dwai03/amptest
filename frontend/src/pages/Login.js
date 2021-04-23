@@ -3,6 +3,10 @@ import "../stylesheets/module.scss";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  async function handleSubmit(e) {
+    const user = { email, password };
+    debugger;
+  }
   return (
     <div className="login-container">
       <div>
@@ -10,16 +14,25 @@ export default function Login() {
           <span>Sign in to your</span>
           <span> account.</span>
         </p>
-        <div className="login-input">
-          <div>
-            <label>Email</label>
-            <input label="Email"></input>
+        <form onSubmit={handleSubmit}>
+          <div className="login-input">
+            <div>
+              <label>Email</label>
+              <input
+                type="email"
+                onChange={({ target }) => setEmail(target.value)}
+              ></input>
+            </div>
+            <div>
+              <label>Password</label>
+              <input
+                type="Password"
+                onChange={({ target }) => setPassword(target.value)}
+              ></input>
+            </div>
           </div>
-          <div>
-            <label>Password</label>
-            <input label="Password"></input>
-          </div>
-        </div>
+          <button type="submit">Login</button>
+        </form>
       </div>
     </div>
   );
