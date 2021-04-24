@@ -1,244 +1,240 @@
 .nav-bar {
-    background-color: black;
-    display: flex;
-    .nav-logo {
-      .nav-img {
-        width: 10em;
-        margin: 0.5em 0 0.5em 1em;
+  background-color: black;
+  display: flex;
+  .nav-logo {
+    .nav-img {
+      width: 10em;
+      margin: 0.5em 0 0.5em 1em;
+    }
+  }
+  @media (min-width: 48.6rem) {
+    .nav-links {
+      display: flex;
+      position: absolute;
+      right: 0;
+      .nav-pages {
+        a {
+          margin-right: 1em;
+          color: white;
+          text-decoration: none;
+        }
+        margin-top: 2.8em;
+      }
+      .sign-in-btn {
+        margin-top: 0.8em;
+        a {
+          color: white;
+        }
+        button {
+          height: 100%;
+          width: 60%;
+          background-color: #ed1470;
+          border-radius: 5px;
+          color: white;
+        }
       }
     }
-    @media (min-width: 48.6rem) {
-      .nav-links {
-        display: flex;
-        position: absolute;
-        right: 0;
-        .nav-pages {
-          a {
-            margin-right: 1em;
-            color: white;
-            text-decoration: none;
-          }
-          margin-top: 2.8em;
-        }
-        .sign-in-btn {
-          margin-top: 0.8em;
-          a {
-            color: white;
-          }
-          button {
-            height: 100%;
-            width: 60%;
-            background-color: #ed1470;
-            border-radius: 5px;
-            color: white;
-          }
-        }
-      }
-    }
+  }
 }
 
 .landingfooter {
-    background-Color: black;
-    
-    font: normal normal bold 22px/24px Tenon;
+  background-color: black;
+
+  font: normal normal bold 22px/24px Tenon;
+  color: white;
+  height: 382px;
+  width: 100%;
+  padding: 91px 118px 0px 110px;
+  list-style-type: none;
+
+  a {
+    font: normal normal normal 14px/37px Tenon;
     color: white;
-    height: 382px;
-    width: 100%;
-    padding: 91px 118px 0px 110px;
     list-style-type: none;
-    
-    a {
-        font: normal normal normal 14px/37px Tenon;
-        color: white;
-        list-style-type: none;
-    }
-    a:hover{
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .footercolumn {
-        vertical-align: text-top; 
-        list-style-type: none;
-    }
-    ul {
-        display: inline-block;
-        list-style-type: none;
-    }
-}
-.landingcreatorfooterbar{
-    background-color: #ED1470;
-    color: #ED1470;
-    height: 41;
-    width: 100%;
-}
-.landingcampaignfooterbar{
-    background-color:blue;
-    color: blue;
-    height: 41;
-    width: 100%;
-}
-
-.footercolumnright{
-    vertical-align: text-top; 
+  }
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .footercolumn {
+    vertical-align: text-top;
     list-style-type: none;
-    float: right;
+  }
+  ul {
+    display: inline-block;
+    list-style-type: none;
+  }
+}
+.landingcreatorfooterbar {
+  background-color: #ed1470;
+  color: #ed1470;
+  height: 41;
+  width: 100%;
+}
+.landingcampaignfooterbar {
+  background-color: blue;
+  color: blue;
+  height: 41;
+  width: 100%;
 }
 
-
-.landingHeadercontainer{
-   
-        position:relative;
-        width: 100%;
-        height: 100%;
-        font-size: 0;
-        //background-image: url("../../../public/assets/LandingHeaderBackground.jpg");
-    .img{
-        
-        width: 100%;
-        height: 100%;
-    }
-}
-.landingHeadercontainerblock{
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-}
-.landingHeaderTitle {
-    font-Family: Tenon;
-    font-Weight: bold;
-    font-Size: 64px;
-    color: white;
-    text-Transform: uppercase;
-    line-Height: 1;
-    letter-spacing: -0.64px;
-    white-space: pre-wrap;
-}
-.landingHeaderText {
-    font-Family: Tenon;
-    font-Size: 18px;
-    color: white;
-    line-Height: 1;
-    white-space: pre-wrap;
-    letter-spacing: -0.18px;
-    font-Weight: normal;
-    text-transform: none;
-}
-.landingBodycontainerblock{
-    position: relative;
-    
-    font-size: 0;
-
-}
-.landingBodyContainerTop{
-    vertical-align: middle;
-    position: absolute;
-}
-.landingBodyTitle {
-    font-Family: Tenon;
-    font-Weight: bold;
-    font-Size: 64px;
-    color: #33A8DF;
-    text-Transform: uppercase;
-    line-Height: 1;
-    white-space: pre-wrap;
-}
-.landingBodyTextTop {
-    font-Family: Tenon;
-    font-Size: 22px;
-    color: #545454;
-    line-Height: 1;
-    white-space: pre-wrap;
-    font-Weight: normal;
-    text-transform: none;
-}
-.landingicons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    ul {
-        display: inline-block;
-        list-style-type: none;
-    }
-}
-.landingBodyContainerBot{
-    position: absolute;
-    bottom: 108px;
-    left: 16px;
-}
-.landingBodyTextQuote {
-    font-Family: Tenon;
-    font-Size: 50px;
-    color: black;
-    background-color: white;
-    line-Height: 1;
-    white-space: pre-wrap;
-    font-Weight: bold;
-    padding: 72px 47px 72px 47px;
-}
-.landingBodyTextQuoted {
-    font-Family: Tenon;
-    font-Size: 15px;
-    color: black;
-    line-Height: 1;
-    white-space: pre-wrap;
-    font-Weight: normal;
-    text-transform: none;
-}
-.landingBodyTextQuoteReview {
-    font-Family: Tenon;
-    font-Size: 18px;
-    color: black;
-    line-Height: 1;
-    white-space: pre-wrap;
-    font-Weight: normal;
-    text-transform: none;
+.footercolumnright {
+  vertical-align: text-top;
+  list-style-type: none;
+  float: right;
 }
 
-.signupPage{
-    background-color: #6752A2;
+.landingHeadercontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  //background-image: url("../../../public/assets/LandingHeaderBackground.jpg");
+  .img {
     width: 100%;
     height: 100%;
+  }
 }
-.signupBlock{
-    background-color: white;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 646px;
-    height: 368px;
-    padding: 49px 71px;
+.landingHeadercontainerblock {
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
-.signupHeader{
-    font: normal normal bold 35px/37px Tenon;
-    letter-spacing: -0.35px;
-    color: #000000;
+.landingHeaderTitle {
+  font-family: Tenon;
+  font-weight: bold;
+  font-size: 64px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.64px;
+  white-space: pre-wrap;
 }
-.signupDesc{
-    font: normal normal normal 12px/13px Tenon;
-    letter-spacing: -0.24px;
-    color: #000000;
+.landingHeaderText {
+  font-family: Tenon;
+  font-size: 18px;
+  color: white;
+  line-height: 1;
+  white-space: pre-wrap;
+  letter-spacing: -0.18px;
+  font-weight: normal;
+  text-transform: none;
+}
+.landingBodycontainerblock {
+  position: relative;
+
+  font-size: 0;
+}
+.landingBodyContainerTop {
+  vertical-align: middle;
+  position: absolute;
+}
+.landingBodyTitle {
+  font-family: Tenon;
+  font-weight: bold;
+  font-size: 64px;
+  color: #33a8df;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: pre-wrap;
+}
+.landingBodyTextTop {
+  font-family: Tenon;
+  font-size: 22px;
+  color: #545454;
+  line-height: 1;
+  white-space: pre-wrap;
+  font-weight: normal;
+  text-transform: none;
+}
+.landingicons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  ul {
+    display: inline-block;
+    list-style-type: none;
+  }
+}
+.landingBodyContainerBot {
+  position: absolute;
+  bottom: 108px;
+  left: 16px;
+}
+.landingBodyTextQuote {
+  font-family: Tenon;
+  font-size: 50px;
+  color: black;
+  background-color: white;
+  line-height: 1;
+  white-space: pre-wrap;
+  font-weight: bold;
+  padding: 72px 47px 72px 47px;
+}
+.landingBodyTextQuoted {
+  font-family: Tenon;
+  font-size: 15px;
+  color: black;
+  line-height: 1;
+  white-space: pre-wrap;
+  font-weight: normal;
+  text-transform: none;
+}
+.landingBodyTextQuoteReview {
+  font-family: Tenon;
+  font-size: 18px;
+  color: black;
+  line-height: 1;
+  white-space: pre-wrap;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.signupPage {
+  background-color: #6752a2;
+  width: 100%;
+  height: 100%;
+}
+.signupBlock {
+  background-color: white;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 646px;
+  height: 368px;
+  padding: 49px 71px;
+}
+.signupHeader {
+  font: normal normal bold 35px/37px Tenon;
+  letter-spacing: -0.35px;
+  color: #000000;
+}
+.signupDesc {
+  font: normal normal normal 12px/13px Tenon;
+  letter-spacing: -0.24px;
+  color: #000000;
 }
 .signupFooter {
-    text-align: center;
-    font: normal normal normal 12px/14px Tenon;
-    letter-spacing: -0.12px;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, 0%);
-    bottom: 0;
-    color: #FFFFFF;
-    background-color: #6752A2;
+  text-align: center;
+  font: normal normal normal 12px/14px Tenon;
+  letter-spacing: -0.12px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  bottom: 0;
+  color: #ffffff;
+  background-color: #6752a2;
 }
-.signupButtonTypeBlock{
-    display:flex;
-    justify-content: center;
-    align-items: stretch;
-    align-content: space-between;
+.signupButtonTypeBlock {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-between;
 }
-.signupButtonNext{
-    float: right;
+.signupButtonNext {
+  float: right;
 }
