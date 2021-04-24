@@ -8,8 +8,8 @@ import NavBar from "./components/common/Header.js";
 import LoginPage from "./pages/login_page/LoginPage";
 import Login from "./pages/Login.js";
 import DashboardPage from "./pages/dashboard_page/DashboardPage.js";
-import Signup_page from "./pages/signup_page/Signup_page";
-import Landing_page from "./pages/landing_page/Landing_page";
+import Signup_page from "./pages/Signup_page";
+import Landing_page from "./pages/Landing_page";
 import BecomeCreatorPage from "./pages/become_creator_page/BecomeCreatorPage";
 import WorkflowPage from "./pages/workflow_page/WorkflowPage";
 import ProfilePage from "./pages/profile_page/ProfilePage";
@@ -34,6 +34,9 @@ export default function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/workflow">
             <WorkflowPage />
+          </PrivateRoute>
+          <PrivateRoute exact path="/signup">
+            <Signup_page />
           </PrivateRoute>
           <Route path="/become-creator">
             <BecomeCreatorPage />

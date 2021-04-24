@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../stylesheets/layout.scss'
-import Button from './../../components/common/Button'
+import '../stylesheets/layout.scss'
+import Button from './../components/common/Button'
 
 const Signup_page = () => {
     return (

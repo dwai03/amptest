@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../stylesheets/layout.scss'
-import Footer from './../../components/common/Footer'
-import Button from './../../components/common/Button'
+import '../stylesheets/layout.scss'
+import Footer from './../components/common/Footer'
+import Button from './../components/common/Button'
 
 const Landing_page = () => {
     return (
@@ -19,7 +19,7 @@ const Landing_page = () => {
                     </div>
                 </div> 
 
-                <img src={require("../../../public/assets/LandingHeaderBackground.jpg")}>
+                <img src={require("../../public/assets/LandingHeaderBackground.jpg")}>
                 </img>
             </div>
             <div className = 'landingBodycontainerblock'>
@@ -39,7 +39,7 @@ const Landing_page = () => {
                 <div className = 'landingicons'>
                     <ul>
                         <li>
-                            <img src={require("../../../public/assets/InfluencerIcon.png")}>
+                            <img src={require("../../public/assets/InfluencerIcon.png")}>
                             </img>
                         </li>
                         <li>
@@ -48,7 +48,7 @@ const Landing_page = () => {
                     </ul>
                     <ul>
                         <li>
-                            <img src={require("../../../public/assets/OptimizeIcon-home.png")}>
+                            <img src={require("../../public/assets/OptimizeIcon-home.png")}>
                             </img>
                         </li>
                         <li>
@@ -57,7 +57,7 @@ const Landing_page = () => {
                     </ul>
                     <ul>
                         <li>
-                            <img  src={require("../../../public/assets/ReportingIcon-home.png")}>
+                            <img  src={require("../../public/assets/ReportingIcon-home.png")}>
                             </img>
                         </li>
                         <li>
@@ -79,7 +79,7 @@ const Landing_page = () => {
                     </div>
                 </div>
                 
-                <img src={require("../../../public/assets/LandingBodyBackground.jpg")}>
+                <img src={require("../../public/assets/LandingBodyBackground.jpg")}>
                 </img>
 
             </div>
