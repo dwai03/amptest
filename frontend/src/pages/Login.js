@@ -7,7 +7,7 @@ export default function Login() {
   const [user, setUser] = useState();
   async function handleSubmit(e) {
     const user = { email, password };
-    // const response = await axios.post("http://localhost:3000/api/login", user);
+    // const response = await axios.post("http://danbackend:3000/api/login", user);
     let response = {
       data: {
         username: "themisterjuly",
@@ -23,13 +23,13 @@ export default function Login() {
   }
   return (
     <div className="login-container">
-      <div>
+      <div className="login-form">
         <p>
           <span>Sign in to your</span>
           <span> account.</span>
         </p>
         <form onSubmit={handleSubmit}>
-          <div className="login-input">
+          <div>
             <div>
               <label>Email</label>
               <input
@@ -45,7 +45,7 @@ export default function Login() {
               ></input>
             </div>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit">SIGN IN</button>
         </form>
       </div>
     </div>
