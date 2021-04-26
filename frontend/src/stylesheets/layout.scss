@@ -193,10 +193,11 @@
 }
 
 .signupPage {
-      background-color: #6752a2; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  height: 100vh;
+  background-color: #6752a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .signupBlock {
   background-color: white;
@@ -235,7 +236,8 @@
 .signupButtonNext {
   float: right;
 }
-body, html {
+body,
+html {
   height: 100%;
   display: grid;
 }
