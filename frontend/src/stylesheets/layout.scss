@@ -86,8 +86,8 @@
 
 .landingHeadercontainer {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   font-size: 0;
   //background-image: url("../../../public/assets/LandingHeaderBackground.jpg");
   .img {
@@ -205,6 +205,7 @@
   width: 646px;
   height: 368px;
   padding: 49px 71px;
+  position: relative;
 }
 .signupHeader {
   font: normal normal bold 35px/37px Tenon;
@@ -231,16 +232,49 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  align-content: space-between;
+  align-content: center;
+  padding-top: 10px;
+}
+.signupButtonType {
+  flex: 32%;
+  margin-bottom: 2%; /* (100-32*3)/2 */
+}
+.signupSocialButtonTypeBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.signupSocialButtonType {
+  flex: 32%;
+  margin-bottom: 2%; /* (100-32*3)/2 */
+}
+.signupDescFormBlock {
+  width: 522px;
+  height: 100px;
+  padding-top: 10px;
+}
+.signupDescForm{
+  background: #000000 0% 0% no-repeat padding-box;
+  border-radius: 4px 4px 0px 0px;
+  opacity: 0.09;
+  width: 522px;
+  height: 100px;
+  color: black;
+}
+.signupButtonCatBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+.signupButtonCat {
+  flex: 24%;
+  margin-bottom: 2%; /* (100-32*3)/2 */
 }
 .signupButtonNext {
   float: right;
-}
-body,
-html {
-  height: 100%;
-  display: grid;
-}
-.center-me {
-  margin: auto;
+  bottom: 47px;
+  right: 30px;
+  position: absolute;
 }

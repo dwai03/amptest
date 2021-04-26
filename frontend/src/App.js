@@ -10,6 +10,8 @@ import Login from "./pages/Login.js";
 import DashboardPage from "./pages/dashboard_page/DashboardPage.js";
 import Signup_Type from "./pages/Signup_Type";
 import Signup_Desc from "./pages/Signup_Desc";
+import Signup_Cat from "./pages/Signup_Cat";
+import Signup_Social from "./pages/Signup_Social";
 import Landing_page from "./pages/Landing_page";
 import BecomeCreatorPage from "./pages/become_creator_page/BecomeCreatorPage";
 import WorkflowPage from "./pages/workflow_page/WorkflowPage";
@@ -34,8 +36,17 @@ export default function App() {
         <PrivateRoute exact path="/workflow">
           <WorkflowPage />
         </PrivateRoute>
-        <AuthRoute exact path="/signup">
+        <AuthRoute exact path="/signuptype">
           <Signup_Type />
+        </AuthRoute>
+        <AuthRoute exact path="/signupsocial">
+          <Signup_Social />
+        </AuthRoute>
+        <AuthRoute exact path="/signupdesc">
+          <Signup_Desc />
+        </AuthRoute>
+        <AuthRoute exact path="/signupcat">
+          <Signup_Cat />
         </AuthRoute>
         <Route path="/become-creator">
           <BecomeCreatorPage />

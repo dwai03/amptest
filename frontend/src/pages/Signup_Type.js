@@ -15,12 +15,18 @@ const Signup_Type = () => {
                     pure influencer!{"\n"}
                 </div>
                 <div className = 'signupButtonTypeBlock'>
-                    <Button  text={'CREATOR'} />
-                    <Button  text={'MODEL'} />
-                    <Button  text={'INFLUENCER'} />
+                    <div className = 'signupButtonType'>
+                        <Button  text={'CREATOR'} />
+                    </div>
+                    <div className = 'signupButtonType'>
+                        <Button  text={'MODEL'} />
+                    </div>
+                    <div className = 'signupButtonType'>
+                        <Button  text={'INFLUENCER'} />
+                    </div>
                 </div>
                 <div className = 'signupButtonNext'>
-                    <Button  text={'NEXT'} />
+                    <Button  text={'NEXTType'} />
                 </div>
             </div>
             <div className = 'signupFooter'>

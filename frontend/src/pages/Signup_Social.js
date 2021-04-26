@@ -1,4 +1,6 @@
 import React from 'react'
+import '../stylesheets/layout.scss'
+import Button from '../components/common/Button'
 
 const Signup_Social = () => {
     return (
@@ -12,16 +14,28 @@ const Signup_Social = () => {
                     platforms that matter most to you OR you can get started with just an email. Whatever you {"\n"}
                     prefer! You’ll be able to add more connections later on too.{"\n"}
                 </div>
-                <div className = 'signupButtonTypeBlock'>
-                    <Button  text={'Facebook'} />
-                    <Button  text={'Instagram'} />
-                    <Button  text={'Twitter'} />
-                    <Button  text={'TikTok'} />
-                    <Button  text={'YouTube'} />
-                    <Button  text={'Email Address'} />
+                <div className = 'signupSocialButtonTypeBlock'>
+                    <div className = 'signupSocialButtonType'>
+                        <Button  text={'Facebook'} />
+                    </div>
+                    <div className = 'signupSocialButtonType'>
+                        <Button  text={'Instagram'} />
+                    </div>
+                    <div className = 'signupSocialButtonType'>
+                        <Button  text={'Twitter'} />
+                    </div>
+                    <div className = 'signupSocialButtonType'>
+                        <Button  text={'TikTok'} />
+                    </div>
+                    <div className = 'signupSocialButtonType'>
+                        <Button  text={'YouTube'} />
+                    </div>
+                    <div className = 'signupSocialButtonType'>
+                        <Button  text={'Email Address'} />
+                    </div>
                 </div>
                 <div className = 'signupButtonNext'>
-                    <Button  text={'NEXT'} />
+                    <Button  text={'NEXTSocial'} />
                 </div>
             </div>
             <div className = 'signupFooter'>
