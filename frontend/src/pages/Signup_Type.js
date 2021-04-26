@@ -1,8 +1,8 @@
 import React from 'react'
 import '../stylesheets/layout.scss'
-import Button from './../components/common/Button'
+import Button from '../components/common/Button'
 
-const Signup_page = () => {
+const Signup_Type = () => {
     return (
         <div className = 'signupPage'>
             <div className = 'signupBlock'>
@@ -31,4 +31,4 @@ const Signup_page = () => {
     )
 }
 
-export default Signup_page
+export default Signup_Type

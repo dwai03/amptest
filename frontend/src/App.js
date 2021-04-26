@@ -8,7 +8,8 @@ import NavBar from "./components/common/Header.js";
 import LoginPage from "./pages/login_page/LoginPage";
 import Login from "./pages/Login.js";
 import DashboardPage from "./pages/dashboard_page/DashboardPage.js";
-import Signup_page from "./pages/Signup_page";
+import Signup_Type from "./pages/Signup_Type";
+import Signup_Desc from "./pages/Signup_Desc";
 import Landing_page from "./pages/Landing_page";
 import BecomeCreatorPage from "./pages/become_creator_page/BecomeCreatorPage";
 import WorkflowPage from "./pages/workflow_page/WorkflowPage";
@@ -22,32 +23,28 @@ export default function App() {
     <div>
       <Switch>
         <AuthRoute exact path="/login">
-          <Login />
+            <Login />
         </AuthRoute>
-        <div>
+        <PrivateRoute exact path="/dashboard">
+          <DashboardPage />
+        </PrivateRoute>
+        <PrivateRoute exact path="/profile">
+          <ProfilePage />
+        </PrivateRoute>
+        <PrivateRoute exact path="/workflow">
+          <WorkflowPage />
+        </PrivateRoute>
+        <AuthRoute exact path="/signup">
+          <Signup_Type />
+        </AuthRoute>
+        <Route path="/become-creator">
+          <BecomeCreatorPage />
+        </Route>
+        <AuthRoute path="/">
           <NavBar />
-          <PrivateRoute exact path="/dashboard">
-            <DashboardPage />
-          </PrivateRoute>
-          <PrivateRoute exact path="/profile">
-            <ProfilePage />
-          </PrivateRoute>
-          <PrivateRoute exact path="/workflow">
-            <WorkflowPage />
-          </PrivateRoute>
-          <PrivateRoute exact path="/signup">
-            <Signup_page />
-          </PrivateRoute>
-          <Route path="/become-creator">
-            <BecomeCreatorPage />
-          </Route>
-          <AuthRoute path="/">
-            <Landing_page />
-          </AuthRoute>
-          <Box height={20} width={1} bgcolor="deeppink"></Box>
-        </div>
+          <Landing_page />
+        </AuthRoute>
       </Switch>
-      {/* Footer isn't everywhere<Footer /> */}
     </div>
   );
 }

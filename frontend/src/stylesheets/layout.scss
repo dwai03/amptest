@@ -193,17 +193,14 @@
 }
 
 .signupPage {
-  background-color: #6752a2;
-  width: 100%;
-  height: 100%;
+      background-color: #6752a2; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }
 .signupBlock {
   background-color: white;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
   width: 646px;
   height: 368px;
   padding: 49px 71px;
@@ -237,4 +234,11 @@
 }
 .signupButtonNext {
   float: right;
+}
+body, html {
+  height: 100%;
+  display: grid;
+}
+.center-me {
+  margin: auto;
 }
