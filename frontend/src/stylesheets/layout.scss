@@ -206,6 +206,7 @@
   height: 368px;
   padding: 49px 71px;
   position: relative;
+  border-radius: 5px;
 }
 .signupHeader {
   font: normal normal bold 35px/37px Tenon;
@@ -216,6 +217,7 @@
   font: normal normal normal 12px/13px Tenon;
   letter-spacing: -0.24px;
   color: #000000;
+  padding-top: 10px;
 }
 .signupFooter {
   text-align: center;
@@ -246,7 +248,6 @@
   padding-top: 10px;
 }
 .signupSocialButtonType {
-  flex: 32%;
   margin-bottom: 2%; /* (100-32*3)/2 */
 }
 .signupDescFormBlock {
@@ -264,13 +265,12 @@
 }
 .signupButtonCatBlock {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
   padding-top: 10px;
 }
 .signupButtonCat {
-  flex: 24%;
   margin-bottom: 2%; /* (100-32*3)/2 */
+  margin-right: 18px;
 }
 .signupButtonNext {
   float: right;

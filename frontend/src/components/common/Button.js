@@ -91,12 +91,12 @@ const Button = ({text}) => {
             text = 'NEXT'
             break;   
         case 'SKIPDesc':
-            btnType = 'btn_signup'
+            btnType = 'btn_skip'
             btnRoute = '/signupcat'
             text = 'SKIP'
             break;  
         case 'SKIPCat':
-            btnType = 'btn_signup'
+            btnType = 'btn_skip'
             btnRoute = '/signupcat'
             text = 'SKIP'
             break;                    
