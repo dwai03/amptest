@@ -12,7 +12,7 @@ const Button = ({text}) => {
     {
         case 'SIGN UP':
             btnType = 'btn_signup'
-            btnRoute = '/signup'
+            btnRoute = '/signupuser'
             break;
         case 'LEARN MORE':
             btnType = 'btn_learnmore'
@@ -69,6 +69,11 @@ const Button = ({text}) => {
         case 'Fashion':
             btnType = 'btn_category '
             btnRoute = '/learnmore'
+            break;
+        case 'NEXTUser':
+            btnType = 'btn_signup'
+            btnRoute = '/signuptype'
+            text = 'NEXT'
             break;
         case 'NEXTType':
             btnType = 'btn_signup'

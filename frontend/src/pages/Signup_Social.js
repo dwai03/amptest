@@ -30,9 +30,6 @@ const Signup_Social = () => {
                     <div className = 'signupSocialButtonType'>
                         <Button  text={'YouTube'} />
                     </div>
-                    <div className = 'signupSocialButtonType'>
-                        <Button  text={'Email Address'} />
-                    </div>
                 </div>
                 <div className = 'signupButtonNext'>
                     <Button  text={'NEXTSocial'} />

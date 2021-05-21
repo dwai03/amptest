@@ -19,51 +19,73 @@ const Landing_page = () => {
                     </div>
                 </div> 
 
-                <img src={require("../../public/assets/LandingHeaderBackground.jpg")}>
-                </img>
+                
             </div>
             <div className = 'landingBodycontainerblock'>
                 <div className = 'landingBodyContainerTop'>
-                    <div className = 'landingBodyTitle'>Only {"\n"}
-                                                        Authentic{"\n"}
-                                                        Matches
-                        <div className = 'landingBodyTextTop'>Reaching new audiences and increasing ROI from your {"\n"}
-                                                    brand campaigns is at the heart of what we do.  Quickly {"\n"}
-                                                    match to thousands of influencers based on their {"\n"}
-                                                    passions and lifestyles, ensuring and authentic expression {"\n"}
-                                                    of your brand that drives new customer sales.{"\n"}
-                            <Button text={'LEARN MORE'} />
+                    <div className = 'landingBodyContentTop'>
+                        <div className = 'landingBodyTitle'>Only {"\n"}
+                                                            Authentic{"\n"}
+                                                            Matches
+                            <div className = 'landingBodyTextTop'>Reaching new audiences and increasing ROI from your {"\n"}
+                                                        brand campaigns is at the heart of what we do.  Quickly {"\n"}
+                                                        match to thousands of influencers based on their {"\n"}
+                                                        passions and lifestyles, ensuring and authentic expression {"\n"}
+                                                        of your brand that drives new customer sales.{"\n"}
+                                <Button text={'LEARN MORE'} />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className = 'landingicons'>
-                    <ul>
-                        <li>
-                            <img src={require("../../public/assets/InfluencerIcon.png")}>
-                            </img>
-                        </li>
-                        <li>
-                            <Button text={'LEARN MORE'} /> 
-                        </li> 
-                    </ul>
-                    <ul>
-                        <li>
-                            <img src={require("../../public/assets/OptimizeIcon-home.png")}>
-                            </img>
-                        </li>
-                        <li>
-                            <Button text={'LEARN MORE'} /> 
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <img  src={require("../../public/assets/ReportingIcon-home.png")}>
-                            </img>
-                        </li>
-                        <li>
-                            <Button text={'LEARN MORE'} /> 
-                        </li>
-                    </ul>
+                <div className = 'landingBodyContainerMiddle'>
+                    <div className = 'landingiconsone'>
+                            <ul>
+                            <li>
+                                <img src={require("../../public/assets/InfluencerIcon.png")}>
+                                </img>
+                            </li>
+                            <li className = 'icontext'>
+                                    Work with the right influencers and {"\n"}
+                                    experience authenticity at work.
+
+                            </li>
+                            <li className = 'icontext'>
+                                <Button text={'LEARN MORE'} /> 
+                            </li> 
+                        </ul>
+                    </div>
+                    <div className = 'landingiconstwo'>
+                        <ul>
+                            <li>
+                                <img src={require("../../public/assets/OptimizeIcon-home.png")}>
+                                </img>
+                            </li>
+                            <li className = 'icontext'>
+                                    Optimize your influencer relationships and {"\n"}
+                                    management strategies!
+
+                            </li>
+                            <li className = 'icontext'>
+                                <Button text={'LEARN MORE'} /> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div className = 'landingiconsthree'>
+                        <ul>
+                            <li>
+                                <img  src={require("../../public/assets/ReportingIcon-home.png")}>
+                                </img>
+                            </li>
+                            <li className = 'icontext'>
+                                    Analyze your sales conversions, click {"\n"}
+                                    through rates, impressions, and more.
+
+                            </li>
+                            <li className = 'icontext'>
+                                <Button text={'LEARN MORE'} /> 
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className = 'landingBodyContainerBot'>
                     <div className = 'landingBodyTextQuote'>"A true disruptor {"\n"}
@@ -78,10 +100,6 @@ const Landing_page = () => {
                         </div>
                     </div>
                 </div>
-                
-                <img src={require("../../public/assets/LandingBodyBackground.jpg")}>
-                </img>
-
             </div>
             <Footer />
         </div>

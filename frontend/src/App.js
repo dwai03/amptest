@@ -17,8 +17,10 @@ import BecomeCreatorPage from "./pages/become_creator_page/BecomeCreatorPage";
 import WorkflowPage from "./pages/workflow_page/WorkflowPage";
 import ProfilePage from "./pages/profile_page/ProfilePage";
 import Footer from "./components/common/Footer";
+import Creator_info_page from "./pages/Creator_info_page";
 
 import { AuthRoute, PrivateRoute } from "./utils/route_util";
+import Signup_User from "./pages/Signup_User.js";
 
 export default function App() {
   return (
@@ -42,14 +44,18 @@ export default function App() {
         <AuthRoute exact path="/signupsocial">
           <Signup_Social />
         </AuthRoute>
+        <AuthRoute exact path="/signupuser">
+          <Signup_User/>
+        </AuthRoute>
         <AuthRoute exact path="/signupdesc">
           <Signup_Desc />
         </AuthRoute>
         <AuthRoute exact path="/signupcat">
           <Signup_Cat />
         </AuthRoute>
-        <Route path="/become-creator">
-          <BecomeCreatorPage />
+        <Route path="/creatorinfo">
+          <NavBar />
+          <Creator_info_page />
         </Route>
         <AuthRoute path="/">
           <NavBar />
