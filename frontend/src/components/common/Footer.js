@@ -26,7 +26,7 @@ const Footer = ({footertype}) => {
                     <Link component={RouterLink} to="/creatorinfo">Become a Creator</Link>
                 </li>
                 <li>
-                    <Link component={RouterLink} to="/workflow">Creator Sign In</Link>
+                    <Link component={RouterLink} to="/login">Creator Sign In</Link>
                 </li>
             </ul>    
             <ul  className='footercolumn'>Learn
